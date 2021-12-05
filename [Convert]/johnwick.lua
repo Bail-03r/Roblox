@@ -2094,5 +2094,4 @@ crosshair3.Adornee = nil
 crosshair3.Enabled = false	
 Humanoid.AutoRotate = true
 	end	
-Humanoid.Health = math.huge
 end
