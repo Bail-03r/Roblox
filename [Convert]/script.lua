@@ -14,6 +14,10 @@ Section:NewButton("Parkour", "Script Button", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Bail-03r/Roblox/main/%5BConvert%5D/parkour.lua"))()
 end)
 
-Section:NewButton("caramelidance", "Reanimate Button", function()
+Section:NewButton("caramelidance", "Script Button", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Bail-03r/Roblox/main/%5BConvert%5D/caramelidance.lua"))()
+end)
+
+Section:NewButton("John Wick", "Script Button", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Bail-03r/Roblox/main/%5BConvert%5D/johnwick.lua"))()
 end)
