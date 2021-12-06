@@ -501,6 +501,45 @@ function kill(who,kill_)
 		return head
 	end
 end
+
+local AlignChar = game.Players.LocalPlayer.Character
+local Hat = AlignChar:FindFirstChild("Type-49 Abomindation Back Accessory")
+
+local Count = 1
+function Align(Part0,Part1,Position,Angle)
+    local AlignPos = Instance.new('AlignPosition', Part1); AlignPos.Name = "AliP_"..Count
+    AlignPos.ApplyAtCenterOfMass = true;
+    AlignPos.MaxForce = 5772000--67752;
+    AlignPos.MaxVelocity = math.huge/9e110;
+    AlignPos.ReactionForceEnabled = false;
+    AlignPos.Responsiveness = 200;
+    AlignPos.RigidityEnabled = false;
+    local AlignOri = Instance.new('AlignOrientation', Part1); AlignOri.Name = "AliO_"..Count
+    AlignOri.MaxAngularVelocity = math.huge/9e110;
+    AlignOri.MaxTorque = 5772000
+    AlignOri.PrimaryAxisOnly = false;
+    AlignOri.ReactionTorqueEnabled = false;
+    AlignOri.Responsiveness = 200;
+    AlignOri.RigidityEnabled = false;
+    local AttachmentA=Instance.new('Attachment',Part1); AttachmentA.Name = "AthP_"..Count
+    local AttachmentB=Instance.new('Attachment',Part0); AttachmentB.Name = "AthP_"..Count
+    local AttachmentC=Instance.new('Attachment',Part1); AttachmentC.Name = "AthO_"..Count
+    local AttachmentD=Instance.new('Attachment',Part0); AttachmentD.Name = "AthO_"..Count
+    AttachmentC.Orientation = Angle
+    AttachmentA.Position = Position
+    AlignPos.Attachment1 = AttachmentA;
+    AlignPos.Attachment0 = AttachmentB;
+    AlignOri.Attachment1 = AttachmentC;
+    AlignOri.Attachment0 = AttachmentD;
+    Count = Count + 1
+end
+Hat.Handle.AccessoryWeld:Destroy()
+Align(Hat.Handle,AlignChar.Reanim['Right Arm']['none of your business'],Vector3.new(0,.4,-1),Vector3.new(0,-90,-55))
+
+-- part0 - the hat.
+-- part1 - the model we want to align it with.
+
+
 local function CreateBullet(Pos,Direction,Damage)
 	local Bullet=ins("Part",{Locked=true;CanCollide=false;Massless=true;Name="Bullet";Transparency=1;CFrame=ORIGCF(Pos.Position,Direction);Size=v3(0,0,0);Parent=Bullets;})
 	local Att0=ins("Attachment",{Parent=Bullet;Position=v3(0,.5,0)})
