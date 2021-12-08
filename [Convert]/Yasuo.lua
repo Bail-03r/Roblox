@@ -938,7 +938,11 @@ function Align(Part0,Part1,Position,Angle)
 end
 Hat.Handle.AccessoryWeld:Destroy()
 Align(Hat.Handle,AlignChar.Reanim.WindKatana.Handle,Vector3.new(2.2,0.2,0),Vector3.new(-15,90,0))
-
+for _,op in ipairs(AlignChar.Reanim.WindKatana:GetChildren()) do
+    if op:IsA("BasePart") then
+       op.Transparency = 1
+    end
+end
 
 -- part0 - the hat.
 -- part1 - the model we want to align it with.
