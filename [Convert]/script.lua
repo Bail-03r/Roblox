@@ -1,3 +1,17 @@
+--[[
+      ___           ___           ___           ___           ___           ___           ___           ___           ___           ___           ___           ___     
+     /\  \         /\  \         /\__\         /\  \         |\__\         /\  \         /\  \         /\__\         /\__\         /\  \         /\  \         /\  \    
+    /::\  \       /::\  \       /:/  /        /::\  \        |:|  |       /::\  \       /::\  \       /::|  |       /:/  /        /::\  \       /::\  \        \:\  \   
+   /:/\:\  \     /:/\:\  \     /:/__/        /:/\:\  \       |:|  |      /:/\:\  \     /:/\:\  \     /:|:|  |      /:/  /        /:/\:\  \     /:/\:\  \        \:\  \  
+  /::\~\:\__\    \:\~\:\  \   /::\  \ ___   /::\~\:\  \      |:|__|__   /:/  \:\  \   /:/  \:\  \   /:/|:|  |__   /:/__/  ___   /::\~\:\  \   /::\~\:\  \       /::\  \ 
+ /:/\:\ \:|__|    \:\ \:\__\ /:/\:\  /\__\ /:/\:\ \:\__\ ____/::::\__\ /:/__/ \:\__\ /:/__/ \:\__\ /:/ |:| /\__\  |:|  | /\__\ /:/\:\ \:\__\ /:/\:\ \:\__\     /:/\:\__\
+ \:\~\:\/:/  /     \:\/:/  / \/__\:\/:/  / \/__\:\/:/  / \::::/~~/~    \:\  \  \/__/ \:\  \ /:/  / \/__|:|/:/  /  |:|  |/:/  / \:\~\:\ \/__/ \/_|::\/:/  /    /:/  \/__/
+  \:\ \::/  /       \::/  /       \::/  /       \::/  /   ~~|:|~~|      \:\  \        \:\  /:/  /      |:/:/  /   |:|__/:/  /   \:\ \:\__\      |:|::/  /    /:/  /     
+   \:\/:/  /        /:/  /        /:/  /        /:/  /      |:|  |       \:\  \        \:\/:/  /       |::/  /     \::::/__/     \:\ \/__/      |:|\/__/     \/__/      
+    \::/__/        /:/  /        /:/  /        /:/  /       |:|  |        \:\__\        \::/  /        /:/  /       ~~~~          \:\__\        |:|  |                  
+     ~~            \/__/         \/__/         \/__/         \|__|         \/__/         \/__/         \/__/                       \/__/         \|__|                  
+]]--  
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))() local Window = Library.CreateLib("bqhax|Convert|", "DarkTheme") local Tab = Window:NewTab("Reanimate") local Section = Tab:NewSection("Choose")
 
 Section:NewButton("Click Here", "Reanimate Button", function()
@@ -18,6 +32,14 @@ Section:NewButton("caramelidance", "Script Button", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Bail-03r/Roblox/main/%5BConvert%5D/caramelidance.lua"))()
 end)
 
-Section:NewButton("John Wick", "Script Button", function()
+Section:NewButton("John Wick", "Type-49 The Abomination | 4962455546", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Bail-03r/Roblox/main/%5BConvert%5D/johnwick.lua"))()
+end)
+
+Section:NewButton("Funny Runner(broken)", "Type-49 The Abomination | 4962455546", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Bail-03r/Roblox/main/%5BConvert%5D/FunnyRunner.lua"))() 
+end)
+
+Section:NewButton("Yasuo", "B&WKatanaAccessory | 6655796738", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Bail-03r/Roblox/main/%5BConvert%5D/Yasuo.lua"))() 
 end)
