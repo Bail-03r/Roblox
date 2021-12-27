@@ -2,7 +2,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/GelatekWasTaken/Gelat
 --[[Nocturna_A._Alteriano_Night.Owl.Inc]]-- (Edit by kiukiubol & lilh3)
 wait(1 / 60)
 p = game.Players.LocalPlayer
-char = p.Character.Reanim
+char = p.Character
 torso = char.Torso
 neck = char.Torso.Neck
 hum = char.Humanoid

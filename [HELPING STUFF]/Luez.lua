@@ -1,3 +1,9 @@
+--set
+getgenv().log = nil
+--
+getgenv().playerL = function()
+   return game.Players
+end
 getgenv().player = function()
    return game.Players.LocalPlayer
 end
@@ -13,6 +19,16 @@ getgenv().HumanoidState = function()
     state = state:sub(24)
     return state
 end
+getgenv().g = function()
+   return game
+end
+getgenv().Workspace = function()
+   warn('man use workspace')
+   return workspace
+end
+getgenv().currentCamera = function()
+   return workspace.CurrentCamera
+end
 --24
 getgenv().HumanoidRootPart = function()
    return character().HumanoidRootPart 
@@ -22,6 +38,20 @@ getgenv().Disable3D = function()
 end
 getgenv().Enable3D = function()
    game.RunService:Set3dRenderingEnabled(true)
+end
+getgenv().teleport = function(who,Part,message)
+   if playerL():FindFirstChild(who) then
+      HumanoidRootPart().CFrame = playerL()[who].Character[Part].CFrame
+   else
+      print(message)
+   end
+end
+getgenv().view = function(who,Part,message)
+   if playerL():FindFirstChild(who) then
+      currentCamera().CameraSubject = playerL()[who].Character[Part].CFrame
+   else
+      print(message)
+   end
 end
 
 getgenv().luez={
