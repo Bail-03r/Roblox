@@ -175,7 +175,7 @@ function main()
     SummonEffect("You execute script from", "Red", "bqhax|Company|")
     
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-    local Window = Library.CreateLib("bqhax|Company|[DaModded] #include<0x8q11#1553.h>", "DarkTheme")
+    local Window = Library.CreateLib("bqhax|Company|[DaModded] 0x8q11#1553", "DarkTheme")
     local Tab = Window:NewTab("misc")
     
     local character = game.Players.LocalPlayer.Character
@@ -193,15 +193,6 @@ function main()
     
     Section:NewButton("aimlock", "", function()
         _.misc_loadstring("https://gist.githubusercontent.com/Bail-03r/55d85fa9afacef0b2f86e0a570b33b33/raw/0f73709d5a616812515130685a9b92e58f131684/aimlock.lua")
-    end)
-    
-    Section:NewButton("kick player", "", function()
-        local oldpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-        bypasstp(CFrame.new(0,99999999,0))
-        task.wait(1)
-        dropplayer()
-        task.wait(2)
-        bypasstp(oldpos)
     end)
     
     local Section = Tab:NewSection("world")
