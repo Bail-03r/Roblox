@@ -259,13 +259,6 @@ function main()
         end)
     end
     
-    local Tab = Window:NewTab("tp")
-    local Section = Tab:NewSection("")
-    
-    Section:NewButton("chill in void", "", function()
-        CFrame.new(0,99999999,0)
-    end)
-    
 end
 
 if game.Players.LocalPlayer:IsInGroup(14199017) then
